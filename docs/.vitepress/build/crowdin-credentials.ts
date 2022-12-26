@@ -6,7 +6,10 @@ import { docRoot, errorAndExit } from '@element-plus/build-utils'
 
 const credentialPlaceholder = 'API_TOKEN_PLACEHOLDER'
 
-const CREDENTIAL = process.env.CROWDIN_TOKEN
+// console.log(process.env.CROWDIN_TOKEN)
+// const CREDENTIAL = process.env.CROWDIN_TOKEN
+const CREDENTIAL =
+  'c4b600206cdf5b1eadfe5b01783b521537069ec46fc6315059594899486dd5b2b22d11bd663900fa'
 if (!CREDENTIAL) {
   errorAndExit(new Error('Environment variable CROWDIN_TOKEN cannot be empty'))
 }

@@ -2,7 +2,7 @@
 # Your Crowdin credentials
 #
 'project_id': '473874'
-'api_token': 'API_TOKEN_PLACEHOLDER'
+'api_token': 'c4b600206cdf5b1eadfe5b01783b521537069ec46fc6315059594899486dd5b2b22d11bd663900fa'
 'base_path': '.'
 'base_url': 'https://api.crowdin.com'
 

@@ -7,8 +7,8 @@ import SponsorList from './sponsor-list.vue'
 
 <template>
   <div class="sponsors-container" m="auto">
-    <SponsorList :sponsors="platinumSponsors" sponsor-type="platinumSponsor" />
-    <SponsorList :sponsors="goldSponsors" sponsor-type="goldSponsor" />
+    <!-- <SponsorList :sponsors="platinumSponsors" sponsor-type="platinumSponsor" />
+    <SponsorList :sponsors="goldSponsors" sponsor-type="goldSponsor" /> -->
 
     <sponsors-button round />
   </div>
@@ -18,6 +18,7 @@ import SponsorList from './sponsor-list.vue'
 .home-page {
   .sponsors-container {
     margin-top: 72px;
+
     .join {
       text-align: center;
       margin: 0 0 52px 0;
@@ -32,6 +33,7 @@ import SponsorList from './sponsor-list.vue'
     &.platinum {
       --min-width: 220px;
     }
+
     &.gold {
       --min-width: 140px;
 

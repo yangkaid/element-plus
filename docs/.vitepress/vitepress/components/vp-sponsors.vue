@@ -11,9 +11,9 @@ const sponsor = computed(() => sponsorLocale[lang.value])
 
 <template>
   <div class="page-content">
-    <p class="title">{{ sponsor.sponsoredBy }}</p>
+    <!-- <p class="title">{{ sponsor.sponsoredBy }}</p>
     <VPSponsorLarge />
-    <VPSponsorSmall />
+    <VPSponsorSmall /> -->
   </div>
 </template>
 
@@ -21,6 +21,7 @@ const sponsor = computed(() => sponsorLocale[lang.value])
 .page-content {
   padding-bottom: 10px;
   padding-top: 0;
+
   .title {
     color: var(--text-color-secondary);
     font-weight: 300;

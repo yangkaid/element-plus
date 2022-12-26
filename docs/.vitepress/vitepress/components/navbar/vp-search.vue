@@ -40,7 +40,6 @@ function isSpecialClick(event: MouseEvent) {
 
 function getRelativePath(absoluteUrl: string) {
   const { pathname, hash } = new URL(absoluteUrl)
-
   return pathname + hash
 }
 

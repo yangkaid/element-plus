@@ -22,6 +22,7 @@ async function main() {
   })
   const languages = dirs.map((dir) => dir.name)
   const langWithoutEn = languages.filter((l) => l !== 'en-US')
+  console.log(languages)
 
   await fs.promises.mkdir(localeOutput)
 
