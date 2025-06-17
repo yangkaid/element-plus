@@ -46,7 +46,7 @@ export default defineConfig(async ({ mode }) => {
       ],
     },
     server: {
-      port: 3000,
+      port: 3001,
       host: true,
       https: !!env.HTTPS ? {} : false,
     },
