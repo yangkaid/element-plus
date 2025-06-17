@@ -1,0 +1,34 @@
+{
+  "en-US": [
+    {
+      "text": "Guide",
+      "link": "/guide/design",
+      "activeMatch": "/guide/"
+    },
+    {
+      "text": "Component",
+      "link": "/component/overview",
+      "activeMatch": "/component/"
+    },
+    {
+      "text": "Playground",
+      "link": "https://element-plus.run"
+    }
+  ],
+  "zh-CN": [
+    {
+      "text": "指南",
+      "link": "/guide/design",
+      "activeMatch": "/guide/"
+    },
+    {
+      "text": "组件",
+      "link": "/component/overview",
+      "activeMatch": "/component/"
+    },
+    {
+      "text": "Playground",
+      "link": "https://element-plus.run"
+    }
+  ]
+}
