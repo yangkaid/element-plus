@@ -97,13 +97,6 @@ export const head: HeadConfig[] = [
   ['script', {}, fs.readFileSync(path.resolve(vpRoot, 'lang.js'), 'utf-8')],
   [
     'script',
-    {
-      async: 'true',
-      src: 'https://www.googletagmanager.com/gtag/js?id=UA-175337989-1',
-    },
-  ],
-  [
-    'script',
     {},
     `if ('serviceWorker' in navigator) {
       navigator.serviceWorker
@@ -115,34 +108,6 @@ export const head: HeadConfig[] = [
           console.log(err);
         });
     }`,
-  ],
-  [
-    'script',
-    {
-      async: 'true',
-    },
-    `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'UA-175337989-1');`,
-  ],
-  [
-    'script',
-    {
-      async: 'true',
-      src: 'https://www.googletagmanager.com/gtag/js?id=G-M74ZHEQ1M1',
-    },
-  ],
-  [
-    'script',
-    {},
-    `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-M74ZHEQ1M1');
-    `,
   ],
   [
     'script',

@@ -88,6 +88,7 @@ const setupConfig = (configEnv) => {
       },
     },
 
+    // 后渲染处理，在页面渲染完成后，专门处理 Element Plus Popper 组件的 Teleport 容器，确保弹出层能正确显示
     postRender(context) {
       // Inject the teleport markup
       if (context.teleports) {

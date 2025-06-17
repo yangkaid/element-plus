@@ -16,6 +16,7 @@ import {
   projRoot,
 } from '@element-plus/build-utils'
 import { MarkdownTransform } from '../plugins/markdown-transform'
+import vueDevTools from 'vite-plugin-vue-devtools'
 
 import type { Plugin, UserConfig } from 'vitepress'
 
@@ -30,6 +31,7 @@ const optimizeDeps = [...new Set([...epDeps, ...docsDeps])].filter(
     !dep.startsWith('@types/') &&
     !['@element-plus/metadata', 'element-plus'].includes(dep)
 )
+// 特殊处理dayjs，因为他的插件是动态加载的，Vite无法自动检测到这些依赖
 optimizeDeps.push(
   ...(await glob(['dayjs/plugin/*.js'], {
     cwd: path.resolve(projRoot, 'node_modules'),
@@ -45,15 +47,15 @@ const alias: AliasOptions = [
   ...(process.env.DOC_ENV === 'production'
     ? []
     : [
-        {
-          find: /^element-plus(\/(es|lib))?$/,
-          replacement: path.resolve(projRoot, 'packages/element-plus/index.ts'),
-        },
-        {
-          find: /^element-plus\/(es|lib)\/(.*)$/,
-          replacement: `${path.resolve(projRoot, 'packages')}/$2`,
-        },
-      ]),
+      {
+        find: /^element-plus(\/(es|lib))?$/,
+        replacement: path.resolve(projRoot, 'packages/element-plus/index.ts'),
+      },
+      {
+        find: /^element-plus\/(es|lib)\/(.*)$/,
+        replacement: `${path.resolve(projRoot, 'packages')}/$2`,
+      },
+    ]),
 ]
 
 export const getViteConfig = ({ mode }: { mode: string }): ViteConfig => {
@@ -77,7 +79,7 @@ export const getViteConfig = ({ mode }: { mode: string }): ViteConfig => {
     },
     plugins: [
       vueJsx(),
-
+      vueDevTools(),
       // https://github.com/antfu/unplugin-vue-components
       Components({
         dirs: ['.vitepress/vitepress/components'],

@@ -12,7 +12,7 @@ const homeLang = computed(() => homeLocale[lang.value])
 </script>
 
 <template>
-  <footer class="footer" :class="{ 'is-home': isHome }">
+  <footer v-if="isHome" class="footer" :class="{ 'is-home': isHome }">
     <div class="footer-main">
       <h4>{{ homeLang['10'] }}</h4>
       <a
