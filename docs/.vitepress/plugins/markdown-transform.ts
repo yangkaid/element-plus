@@ -134,10 +134,7 @@ const transformComponentMarkdown = (
 
 ${linksText}`
 
-  const contributorsSection = `
-## ${footerLocale[lang].contributors}
-
-<Contributors id="${componentId}" />`
+  const contributorsSection = ``
 
   append.footers.push(sourceSection, isComponent ? contributorsSection : '')
 
