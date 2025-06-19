@@ -741,6 +741,10 @@
           "link": "/watermark",
           "text": "Watermark 水印 ",
           "promotion": "2.4.0"
+        },
+        {
+          "link": "/demo",
+          "text": "Demo 演示"
         }
       ]
     }

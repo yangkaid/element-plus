@@ -12,8 +12,14 @@
       "name": "Launch Edge",
       "request": "launch",
       "type": "msedge",
-      "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}"
+      "url": "http://localhost:3001",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        // 兼容 vite 内部路径映射（可选）
+        "vite://*/packages/*": "${workspaceFolder}/packages/*",
+        "vite://*/play/src/*": "${workspaceFolder}/play/src/*"
+      }
     },
     {
       "name": "Run and debug",

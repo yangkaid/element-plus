@@ -36,6 +36,23 @@
 }
 
 // set all css var for component by map
+// map.merge(
+//     ('text-color': getCssVar('color-white'),
+//       'bg-color': getCssVar('text-color', 'disabled'),
+//       'text-size': 14px,
+//       'icon-size': 18px,
+//       'border-radius': getCssVar('border-radius-base'),
+//     ),
+//     $avatar
+//   );
+// 转化后的css代码
+// .el-avatar {
+//   --el-avatar-text-color: var(--el-color-white);
+//   --el-avatar-bg-color: var(--el-text-color-disabled);
+//   --el-avatar-text-size: 14px;
+//   --el-avatar-icon-size: 18px;
+//   --el-avatar-border-radius: var(--el-border-radius-base);
+// }
 @mixin set-component-css-var($name, $variables) {
   @each $attribute, $value in $variables {
     @if $attribute == 'default' {
